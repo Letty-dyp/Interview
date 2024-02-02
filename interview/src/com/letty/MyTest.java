@@ -22,7 +22,7 @@ public class MyTest {
     }
 
     BigDecimal methodD(BigDecimal apple,BigDecimal strawberry,BigDecimal mango,BigDecimal discount){
-        BigDecimal total = methodA(apple,strawberry,discount).add(mango.multiply(mangoPrice));
+       BigDecimal total = methodB(apple,strawberry,mango,discount);
         int reducePrice = total.intValue() / 100;
         return  total.subtract(new BigDecimal(reducePrice * 10)) ;
     }
